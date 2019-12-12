@@ -1,7 +1,7 @@
 ### Date created
 Include the date you created this project and README file.
 
-### Project Title
+### My new Title
 the Project Title
 
 ### Description
