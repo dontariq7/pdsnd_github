@@ -10,11 +10,11 @@ CITY_DATA = { 'chicago': '../../../CSV files/chicago.csv',
 
 def get_filters():
     """
-    Asks user to specify a city, month, and day to analyze.
-    """ 
-    
+    Asks user to specify a city, month, and day to analyze All.
+    """
 
-    
+
+
     """
     Returns:
         (str) city - name of the city to analyze
@@ -22,37 +22,37 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
 
-    
+
 
     print('Hello! Let\'s explore some US bikeshare data!')
 
 
-    city = input('enter city name: ') 
+    city = input('enter city name: ')
     cities = ["chicago" , "new york city" , "washington"]
     while city.lower().strip() not in cities  :
-     
+
          city = input("You entered unvalid  city, please re-enter city name : ")
-           
-    
+
+
     months = ['January','Feburary','March','April','May','June','July','Augest','Septemper','Octobr','November','December','All']
     month = input("which month you want to be filltered by? or type all for whole year?  ")
-    while  month.title().strip()  not in months : 
+    while  month.title().strip()  not in months :
         month =input ("please enter a valid month number or type all: ")
-         
-        
+
+
 
 
 
     day = input("Enter a day or type all: ")
-    
+
     days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday","Saturday" , "All"]
     while day.title().strip() not in days :
         day = input("please enter a valid day: ")
-       
-   
 
-    
-   
+
+
+
+
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
 
 
@@ -89,9 +89,9 @@ def load_data(city, month, day):
     # filter by month if applicable
     if month != 'All':
         df = df[df['month'] == month]
-        
+
     # filter by day of week if applicable
-    if day != 'All': 
+    if day != 'All':
         # filter by day of week to create the new dataframe
         df = df[df['day'] == day]
     return df
@@ -137,7 +137,7 @@ def station_stats(df):
     # TO DO: display most frequent combination of start station and end station trip
 
     frequent_combination =  pd.DataFrame(df.loc[:,'Start Station']+ " TO : " + df.loc[:,'End Station']).mode()
-    
+
     print("most frequent combination of start station and end station trip : \n",frequent_combination)
 
 
@@ -162,7 +162,7 @@ def trip_duration_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-    
+
 def user_stats(df):
     """Displays statistics on bikeshare users."""
 
@@ -214,7 +214,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-        
+
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
