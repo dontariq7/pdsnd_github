@@ -1,14 +1,18 @@
 ### Date created
-Include the date you created this project and README file.
+The project was created on 20/11/2019
 
 ### My new Title
-the Project Title
+My bikeshare
 
 ### Description
-Describe what your project is about and what it does
+analyzing data for bike rent company in three major cities "Washington, Chicago, New York" and return a useful data for the user depending on the filters he used.
 
 ### Files used
-Include the files used
+Project_02_ex.py
+README.md
+
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+the idea and main base of the project from Udacity.com
+
+useful documentation : https://devdocs.io

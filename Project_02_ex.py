@@ -10,7 +10,11 @@ CITY_DATA = { 'chicago': '../../../CSV files/chicago.csv',
 
 def get_filters():
     """
+<<<<<<< HEAD
     Second change Comment added 
+=======
+    Asks user to specify a city, month, and day to analyze All.
+>>>>>>> refactoring
     """
 
 
@@ -69,7 +73,7 @@ def get_filters():
 
 def load_data(city, month, day):
     """
-    Loads data for the specified city and filters by month and day if applicable.
+    Loads data for the  city and filters by month and day if applicable.
 
     Args:
         (str) city - name of the city to analyze
@@ -98,7 +102,7 @@ def load_data(city, month, day):
 
 
 def time_stats(df):
-    """Displays statistics on the most frequent times of travel."""
+    """Displays statistics on the most frequent times of travels."""
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
